@@ -2,6 +2,7 @@ body,
 html {
     margin: 0;
     padding: 0;
+    font-family: Arial;
 }
 
 #stars1 {
@@ -573,13 +574,71 @@ html {
 
 #section1 {
     width: 100%;
-    height: 550px;
+    height: 600px;
     background-color: #191d2b;
 }
 
 #encabezado {
-    background-color: black;
     padding: 0;
     margin: 0;
     height: 300px;
+}
+
+/* Estilos del encabezado */
+header {
+    position: sticky;
+    background-color: #191d2b;
+    top: 0;
+    z-index: 1000;
+    padding: 25px 40px;
+    /* Ajusta los márgenes superior e inferior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Diseño del nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Espacia los elementos (logo y menú) */
+    align-items: center;
+}
+
+/* Logo a la izquierda */
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.logo a:hover {
+    color: #ff9800;
+}
+
+/* Menú alineado a la derecha */
+.sticky-menu nav .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-menu nav .menu li {
+    margin: 0 10px;
+}
+
+.sticky-menu nav .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sticky-menu nav .menu li a:hover {
+    background-color: #f6edeb;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 6px;
 }
