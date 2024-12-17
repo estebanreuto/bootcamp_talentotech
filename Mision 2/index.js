@@ -11,7 +11,7 @@ function agregarAlCarrito(producto, precio) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carrito.push({ producto, precio });
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    alert(`Se añadió el producto ${producto} al carrito`);
+    alert(`Se añadió el curso de  ${producto} al carrito`);
 }
 
 // Función para actualizar el carrito y mostrarlo en pantalla
