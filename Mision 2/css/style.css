@@ -659,6 +659,10 @@ nav {
     border-radius: 7px;
 }
 
+.carrito-btn:hover {
+    padding: 0 0;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -808,7 +812,7 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 300px;
     color: white;
 }
 
