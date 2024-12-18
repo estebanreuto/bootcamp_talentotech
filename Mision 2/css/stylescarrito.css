@@ -611,9 +611,10 @@ main {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     min-height: 200px; /* Espacio mínimo para los productos */
     color: #B3B3B3; /* Texto gris claro */
+
 }
 
 .total-container {
@@ -645,9 +646,10 @@ button {
     background-color: #333333; /* Fondo oscuro del botón */
     color: white; /* Texto amarillo dorado */
     border: none;
-    border-radius: 50px;
+    border-radius: 7px;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: bolder;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -655,6 +657,7 @@ button:hover {
     background-color: white; /* Fondo amarillo dorado */
     color: #121212; /* Texto oscuro */
     transform: scale(1.05); /* Efecto de crecimiento */
+    font-weight: bold;
 }
 
 .volver {
@@ -664,7 +667,7 @@ button:hover {
     background-color: #333333; /* Fondo oscuro */
     color: white; /* Amarillo dorado */
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 7px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }

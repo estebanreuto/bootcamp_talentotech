@@ -29,8 +29,10 @@ function actualizarCarrito() {
         carrito.forEach((objeto, index) => {
             const elementoProducto = document.createElement('div');
             elementoProducto.innerHTML = `
-                <span>${objeto.producto} - ${objeto.precio}</span>
+            <div style="margin-top: 10px;">
+                <span>${objeto.producto} - ${objeto.precio}</span><br>
                 <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
+                </div>
             `;
             contenedorCarrito.appendChild(elementoProducto);
             total += parseFloat(objeto.precio);
