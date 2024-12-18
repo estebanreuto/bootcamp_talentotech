@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>notedev - Cursos</title>
     <link rel="stylesheet" href="./css/style.css">
+   
 </head>
 
 <body style="background-color: black;">
@@ -31,7 +32,12 @@
                     <li><a href="#about">Nosotros</a></li>
                     <li><a href="#testimonials">Testimonios</a></li>
                     <li><a style="color: black;" class="contact-btn" href="#contact">Contáctanos</a></li>
-                    <li><a style="background-color: #333; padding: 0;" href="./carrito.html"><img src="./assets//carrito-de-compras.png" alt=""></a></li>
+                    <li>
+                        <a style="background-color: #333; padding: 0;" href="./carrito.html" class="cart-icon">
+                            <img src="./assets/carrito-de-compras.png" alt="">
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -60,21 +66,21 @@
             <div class="course-card html-css">
                 <h3>HTML y CSS</h3>
                 <p>Aprende a diseñar y estructurar páginas web de manera profesional.</p>
-                <button onclick="agregarAlCarrito('HTML Y CCS','100')" ><img src="./assets//carrito-de-compras.png" alt=""><br>Comprar</button>
+                <button onclick="agregarAlCarrito('HTML y CSS', '100')"><img src="./assets/carrito-de-compras.png" alt=""><br>Comprar</button>
             </div>
 
             <!-- Curso Python -->
             <div class="course-card python">
                 <h3>Python</h3>
                 <p>Domina uno de los lenguajes de programación más versátiles.</p>
-                <button onclick="agregarAlCarrito('Python','200')" ><img src="./assets//carrito-de-compras.png" alt=""><br>Comprar</button>
+                <button onclick="agregarAlCarrito('Python', '200')"><img src="./assets/carrito-de-compras.png" alt=""><br>Comprar</button>
             </div>
 
             <!-- Curso JavaScript -->
             <div class="course-card javascript">
                 <h3>JavaScript</h3>
                 <p>Descubre cómo dar interactividad y dinamismo a tus proyectos web.</p>
-                <button onclick="agregarAlCarrito('JavaScript','200')" ><img src="./assets//carrito-de-compras.png" alt=""><br>Comprar</button>
+                <button onclick="agregarAlCarrito('JavaScript', '200')"><img src="./assets/carrito-de-compras.png" alt=""><br>Comprar</button>
             </div>
         </div>
     </div>
@@ -108,7 +114,7 @@
             </div>
 
             <div class="about-image">
-                <img src="./assets/Apps-y-juegos-para-aprender-a-programar.jpg"></img>
+                <img src="./assets/Apps-y-juegos-para-aprender-a-programar.jpg" alt="Aprendizaje de programación">
             </div>
         </div>
         <div id="stars1"></div>
@@ -190,7 +196,11 @@
                 </div>
             </div>
         </footer>
-        <script src="./index.js"></script>
+
+        <div id="notification" class="notification"></div>
+
+      <script src="index.js"></script>
 </body>
 
 </html>
+

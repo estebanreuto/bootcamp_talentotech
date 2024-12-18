@@ -53,3 +53,43 @@ function eliminarDelCarrito(index) {
 if (window.location.pathname.includes('carrito.html')) {
     document.addEventListener('DOMContentLoaded', actualizarCarrito);
 }
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function agregarAlCarrito(curso, precio) {
+    const newItem = { name: curso, price: parseFloat(precio) };
+    cart.push(newItem);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    showNotification(`¡${curso} agregado al carrito!`);
+}
+
+function updateCartCount() {
+    const cartCountElement = document.querySelector('.cart-count');
+    cartCountElement.textContent = cart.length;
+    cartCountElement.style.display = cart.length > 0 ? 'block' : 'none';
+    cartCountElement.classList.add('animate');
+    setTimeout(() => cartCountElement.classList.remove('animate'), 300);
+}
+
+function showNotification(message) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.style.display = 'block';
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 2500);
+}
+
+// Código para el menú hamburguesa
+document.addEventListener('DOMContentLoaded', (event) => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    // Update cart count when the page loads
+    updateCartCount();
+});
